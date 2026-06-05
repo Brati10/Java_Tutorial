@@ -1,4 +1,4 @@
-public class SensorReading {
+public class SensorReading implements Describable{
 
     private int seq;
 
@@ -15,7 +15,8 @@ public class SensorReading {
         this.humidityPct = validateHumidity(humidityPct);
     }
 
-    public String print() {
+    @Override
+    public String describe() {
         return "Seq: " + this.seq +" | Sensor-ID: " + this.sensorId + " | Temperatur: " + this.temperatureC + " | Luftfeuchtigkeit: " + this.humidityPct;
     }
 

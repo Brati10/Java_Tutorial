@@ -15,7 +15,7 @@ public class InMemoryStore implements DataHandler {
 
     private void printData() {
         for (SensorReading r : readData) {
-            System.out.println(r.print());
+            System.out.println(r.describe());
         }
     }
 }

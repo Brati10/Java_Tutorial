@@ -1,4 +1,4 @@
-public class Station {
+public class Station implements Describable {
     private String name;
     private String location;
 
@@ -7,7 +7,8 @@ public class Station {
         this.location = location;
     }
     
-    public String print() {
+    @Override
+    public String describe() {
         return "Station: " + this.name + " | Standort: " + this.location;
     }
 }
