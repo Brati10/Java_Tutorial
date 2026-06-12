@@ -1,12 +1,13 @@
 public class ConsolePrinter implements DataHandler {
+
     @Override
     public void handle(SensorReading data) {
-        if(data == null) {
+        if (data == null) {
             System.err.println("Keine Daten zum Verarbeiten.");
         }
 
-        System.out.println("temp: " + data.getTemperatureC() + "°C, humidity: " + data.getHumidityPct() + "%");
-        System.out.println("sensorId: " + data.getSensorId() + ", seq: " + data.getSeq());
+        System.out.println("SensorID: " + data.getSensorId() + " | SequenzID: " + data.getSeq() + " | Temperatur: "
+                + data.getTemperatureC() + " Grad Celsius | Luftfeuchtigkeit: " + data.getHumidityPct() + "%");
     }
 
     @Override

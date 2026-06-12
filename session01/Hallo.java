@@ -14,6 +14,17 @@ public class Hallo {
         readings.add(r2);
         processAll(readings, cp);
         processAll(readings, csv);
+
+        AbstractLogger a = new ConsoleLogger("CONSOLE");
+        a.log("Sensor online");
+        a.log(null);
+        a.log("Temperatur: 19.3");
+        System.out.println(a.getName() + ": " + a.getCount() + " Nachrichten");
+
+        AbstractLogger b = new TimestampLogger("TIMER");
+        b.log("Sensor online");
+        b.log(null);
+        System.out.println(b.getName() + ": " + b.getCount() + " Nachrichten");
     }
 
     public static void processAll(List<SensorReading> readings, DataHandler handler) {
