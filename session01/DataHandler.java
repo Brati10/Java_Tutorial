@@ -1,3 +1,4 @@
 public interface DataHandler {
-    String processReading(SensorReading data);
+    void handle(SensorReading data);
+    void close();
 }
